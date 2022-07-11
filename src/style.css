@@ -1,15 +1,37 @@
+body {
+  font-family: monospace;
+  color: black;
+}
+
+svg {
+  fill: black !important;
+}
+
 .main-heading {
-  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 3rem;
   padding-left: 12px;
   position: fixed;
   color: white;
-  -webkit-text-stroke: 2px black; /* width and color */
+  -webkit-text-stroke: 2px black;
 }
 
 @media screen and (max-width: 600px) {
   .main-heading {
     font-size: 2rem;
   }
+}
+
+.react-images__header_button--fullscreen {
+  display: none !important;
+}
+
+.react-images__header,
+.react-images__footer {
+  background-image: none !important;
+  color: black !important;
+}
+
+.react-images__blanket {
+  background-color: white !important;
 }
