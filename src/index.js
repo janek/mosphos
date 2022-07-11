@@ -50,9 +50,12 @@ function App() {
     console.log(pictures);
   }, []);
 
+  useEffect(() => {
+    document.title = "Mo's Pho ' s";
+  });
+
   return (
     <div>
-      {/* <Gallery photos={photos} onClick={openLightbox} /> */}
       <h1 className={"main-heading"}>Mo's Pho ' s</h1>
       <Gallery photos={pictures} onClick={openLightbox} />
       <ModalGateway>
