@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <Gallery photos={getPhotos()} onClick={openLightbox} />
+      <Gallery photos={photos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
