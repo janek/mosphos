@@ -19,7 +19,7 @@ function App() {
     client
       .getAssets()
       .then((response) => {
-        const info = response.items.map((i) => i.fields.file);
+        var info = response.items.map((i) => i.fields.file);
         // rename info.url to info.src
         info.map((i) => {
           i.src = i.url;
@@ -27,6 +27,8 @@ function App() {
           i.height = i.details.image.height;
         });
 
+        //Randomize info array
+        info = info.sort(() => 0.5 - Math.random());
         console.log(info);
         setPictures(info);
       })
