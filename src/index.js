@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 const contentful = require("contentful");
+import "./style.css";
 
 function App() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -50,6 +51,7 @@ function App() {
   return (
     <div>
       {/* <Gallery photos={photos} onClick={openLightbox} /> */}
+      <h1 className={"main-heading"}>Mo's Pho ' s</h1>
       <Gallery photos={pictures} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (

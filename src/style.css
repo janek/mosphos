@@ -1,0 +1,15 @@
+.main-heading {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-left: 12px;
+  position: fixed;
+  color: white;
+  -webkit-text-stroke: 2px black; /* width and color */
+}
+
+@media screen and (max-width: 600px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+}
