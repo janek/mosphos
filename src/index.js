@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from "react";
 import { render } from "react-dom";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-// import { photos } from "./photos";
 const contentful = require("contentful");
 
 function App() {
