@@ -57,6 +57,9 @@ function App() {
   return (
     <div>
       <h1 className={"main-heading"}>Mo's Pho ' s</h1>
+      <a className={"contact-heading-link"} href="mailto:jan.szynal@gmail.com">
+        <h1 className={"contact-heading"}>contact</h1>
+      </a>
       <Gallery photos={pictures} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
