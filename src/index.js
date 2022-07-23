@@ -11,6 +11,10 @@ function App() {
   const [pictures, setPictures] = useState([]);
 
   const getPhotos = () => {
+    const generateSrcSetString = (sizes, url) => {
+      return sizes.map((size) => `${url}?w=${size}&fm=webp ${size}w`);
+    };
+
     const client = contentful.createClient({
       space: "m81bq01yso83",
       accessToken: "IsdeovevvHYMD8tGweMBi132Aw1_ttFSEsyFo7rnLEE",
@@ -20,9 +24,13 @@ function App() {
       .getAssets()
       .then((response) => {
         var info = response.items.map((i) => i.fields.file);
-        // rename info.url to info.src
+
         info.map((i) => {
-          i.src = i.url;
+          i.src = i.url + "?w=1200&fm=webp";
+          i.srcSet = generateSrcSetString([500, 800, 1024, 1600], i.url);
+          i.sizes = [
+            "(max-width: 600px) 50vw,(min-width: 1024px) 33.3vw,100vw",
+          ];
           i.width = i.details.image.width;
           i.height = i.details.image.height;
         });
