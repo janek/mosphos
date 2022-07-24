@@ -26,11 +26,11 @@ function App() {
         var info = response.items.map((i) => i.fields.file);
 
         info.map((i) => {
-          i.src = i.url + "?w=1200&fm=webp";
+          i.src = i.url + "?w=1600&fm=webp";
           i.srcSet = generateSrcSetString([500, 800, 1024, 1600], i.url);
-          i.sizes = [
-            "(max-width: 600px) 50vw,(min-width: 1024px) 33.3vw,100vw",
-          ];
+          // i.sizes = [
+          //   "(max-width: 600px) 50vw,(min-width: 1024px) 33.3vw, 100vw",
+          // ];
           i.width = i.details.image.width;
           i.height = i.details.image.height;
         });
